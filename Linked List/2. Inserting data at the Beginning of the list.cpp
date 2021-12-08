@@ -13,7 +13,7 @@ void insertion_at_the_Beginnng()
 {
         newNodePointer = (struct node *) malloc(sizeof(struct node)) ;        //  creating new node for the new data
         
-        cout<<"Enter the data that you want to insert at the beginning of the list : " ;
+        cout<<"\nEnter the data that you want to insert at the beginning of the list : " ;
         cin>>newNodePointer->data ;
         
         newNodePointer->next = head ;
@@ -59,7 +59,7 @@ int main()
         cin>>choice ;
     }
     
-    cout<<"List before insertion : " ;
+    cout<<"\nList before insertion : " ;
     display() ;
     
     insertion_at_the_Beginnng() ;
