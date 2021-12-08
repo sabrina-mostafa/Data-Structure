@@ -1,7 +1,6 @@
 #include<bits/stdc++.h>
 using namespace std ;
 
-
 //defining my own data type i.e. structure node for the NODES(data+address)
 
 struct node     // the node is a structure bcz there is multiple data type together(int+address)
@@ -13,23 +12,21 @@ struct node     // the node is a structure bcz there is multiple data type toget
 
 int main()
 {
-    struct node   *head , *newNodePointer , *temp ;
-    head = 0 ;      // intially no nodes are there so head is NULL
-    int choice = 1 ;
+    struct node *head, *newNodePointer, *temp ;
+    head = 0 ;      // intially no nodes are there
+    int choice = 1, count = 0 ;
 
     while(choice)       // creating the nodes of a Linked List
     {
         /// malloc returns a void pointer to the starting address of the allocated block
-        
-        newNodePointer = (struct node * ) malloc(sizeof(struct node)) ;     //allocating how much memory do we want for each node   
-                         //  typecast   +   allocation
+        newNodePointer = (struct node * ) malloc(sizeof(struct node)) ;        //allocating how much memory do we want for each node     // typecast + allocation
         cout<<"Ender data : " ;
         scanf("%d",  &newNodePointer->data ) ;       // getting input in the data part of the Allocated Node
         newNodePointer->next = 0 ;      // bcz at this time it's the last node
-        
-        if(head == 0)   //when the 1st node is created
+
+        if(head == 0)
         {
-            head = temp = newNodePointer ;    // will point to the 1st allocated node
+            head = temp = newNodePointer ;
         }
         else
         {
@@ -40,14 +37,16 @@ int main()
         cin>>choice ;
     }
 
-    //  temp will be pointing to the last node so we have to make it point to the head for printing all the data of the Linked List 
+    //  temp will be pointing to the last node so we have to make it point to the head for printing all the data of the Linked List
     temp = head ;
      cout<<"List : " ;
-    while(temp!=0)    // printing the data of the Linked List
+    while(temp!=0)
     {
             cout<<temp->data<<" " ;
             temp = temp->next ;       //  moving the temp pointer to the next node through the address part of the present node(next)
+            count++ ;
     }
+    cout<<"\nNumber of Data : "<<count ;
 
     return 0 ;
 }
