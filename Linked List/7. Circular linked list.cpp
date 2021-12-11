@@ -35,8 +35,8 @@ int main()
         cout<<"Do u wanna continue(0,1) ? " ;
         cin>>choice ;
     }
-
-    temp->next = head ;
+    temp->next = head ;   // making the last node point to the 1st node 
+    
     temp = head ;
      cout<<"List : " ;
     while(temp->next!=head)
@@ -45,8 +45,10 @@ int main()
             temp = temp->next ;
             count++ ;
     }
-    cout<<temp->data ;
+    //  the last element will not be printed as the while loop stops as soon as it points to the last node
+    cout<<temp->data ;  
     count++ ;
+    
     cout<<"\nNumber of Data : "<<count ;
     cout<<"\n\nCheck : "<<temp->next->data<<endl ;
 
