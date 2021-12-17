@@ -24,7 +24,7 @@ void dequeue()
         cout<<"Underflow\n" ;
     else
     {
-        temp = front ;        // to free the space
+        temp = front ;        // to free the space we will use a temp variable
         cout<<"Dequeued data : "<<front->data<<endl ;
         front = front->next ;
         free(temp) ;
@@ -52,15 +52,15 @@ void enqueue(int x)
     newNodePointer = (struct node *) malloc(sizeof(struct node)) ;
     newNodePointer->data = x ;
     newNodePointer->next = 0 ;
-    if(front==0 && rear==0)
+    if(front==0 && rear==0)   // queue is empty now
     {
-        front = rear = newNodePointer ;
+        front = rear = newNodePointer ;   
         cout<<"Enqueued : "<<rear->data<<endl ;
     }
     else
     {
-        rear->next = newNodePointer ;
-        rear = newNodePointer ;
+        rear->next = newNodePointer ;     // previous node will point the new node now
+        rear = newNodePointer ;   // moving rear to the new node
         cout<<"Enqueued : "<<rear->data<<endl ;
     }
 }
