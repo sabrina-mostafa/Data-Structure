@@ -27,7 +27,7 @@ void display()
     {
         temp = front ;
         cout<<"Queue : \n" ;
-        while(temp->next!=front)
+        while(temp->next!=front)    // bcz last node will point to the front
         {
             cout<<temp->data<<endl ;
             temp = temp->next ;
@@ -44,7 +44,7 @@ void dequeue()
     if(front==0 && rear==0)
         cout<<"Underflow\n" ;
 
-    else if(front==rear)
+    else if(front==rear)   // only one element left in the queue
     {
         front = rear = 0 ;
         free(temp) ;
