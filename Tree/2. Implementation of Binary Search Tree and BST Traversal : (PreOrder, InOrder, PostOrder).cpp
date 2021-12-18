@@ -18,7 +18,7 @@ void Preorder(struct Node *root)
 }
 
 
-void Inorder(Node *root)
+void Inorder(Node *root)    //  InOrder Traversal of a BST always gives the sorted data
 {
     if(root == NULL) return ;
 
@@ -81,7 +81,7 @@ int main()
     Preorder(root) ;
     cout<<"\n" ;
 
-    cout<<"Inorder : ";
+    cout<<"Inorder : " ;    //  InOrder Traversal of a BST gives the sorted data
     Inorder(root) ;
     cout<<"\n" ;
 
