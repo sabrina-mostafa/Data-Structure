@@ -3,7 +3,7 @@ using namespace std ;
 
 #define n 5
 int Queue[n] ;          //  FIFO = Insertion is possible in the REAR and Deletion is possible from the FRONT
-        //  enqueue and dequeue operation should be take O(1) times
+        //  enqueue and dequeue operation should take O(1) times
 int front = -1, rear = -1 ;
 
 void peek()
